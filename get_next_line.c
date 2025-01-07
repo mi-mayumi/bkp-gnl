@@ -6,7 +6,7 @@
 /*   By: mimayumi <mimayumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 12:19:59 by mimayumi          #+#    #+#             */
-/*   Updated: 2025/01/05 13:56:51 by mimayumi         ###   ########.fr       */
+/*   Updated: 2025/01/07 20:57:00 by mimayumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,3 +108,43 @@ static char	*ft_strchr(char *s, int c)
 		return ((char *) &s[i]);
 	return (NULL);
 }
+
+//#include <stdio.h>
+
+// int main()
+// {
+// 	 char *line;
+// 	 int fd;
+// 	 int i = 1;
+// 	 printf("BUFFER_SIZE:%d\n", BUFFER_SIZE);
+// 	 printf("\nFIRST TEST\n");
+// 	 fd = open("mensagem.txt", O_RDONLY);
+// 	 while ((line = get_next_line(fd)) != NULL)
+// 	 {
+// 	 	printf("call %d is:%s", i, line);
+// 	 	free(line);
+// 	 	i++;
+// 	 }
+// 	 printf("\nfinal call %d is:%s\n", i, line);
+// 	 close (fd);
+// 	 printf("\nSECOND TEST (with empty lines)\n");
+// 	 i = 1;
+// 	 fd = open("mensagem.txt", O_RDONLY);
+// 	 while ((line = get_next_line(fd)) != NULL)
+// 	 {
+// 	 	if (ft_strchr(line, '\n') == 0)
+// 	 		printf("call %d is:%s\n", i, line);
+// 	 	else
+// 	 		printf("call %d is:%s", i, line);
+// 	 	free(line);
+// 	 	i++;
+// 	 }
+// 	 printf("final call %d is:%s\n", i, line);
+// 	 close(fd);
+// 	 printf("\nTHIRD TEST\n");
+// 	 printf("negative fd:%s\n", get_next_line(-1));
+// 	 printf("\nFOURTH TEST\n");
+// 	 fd = open("mensagem.txt", O_RDONLY);
+// 	 close(fd);
+// 	 printf("close fd (invalid):%s\n", get_next_line(fd));
+// }
